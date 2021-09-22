@@ -3,6 +3,8 @@
 # Palette: Bash
 # Credits:  
 
+
+
 background="#292d3e"	# Dark
 foreground="#bfc7d5"	#
 
