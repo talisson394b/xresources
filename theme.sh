@@ -21,7 +21,7 @@ function SelectMode() {
     if [[ ${#themes[@]} -ne 0 ]]; then
 	 Menu ${themes[@]}
          read -p "* Select one option: " input
-         if [[ $input -ge 0 && $input -lt ${#themes[@]} ]]
+         if [[ $input -ge 0 && $input -lt ${#themes[@]} ]]; then
 	     THEME=${themes[$input-1]}
 	     echo "Sucesso!"
 	 else
@@ -52,7 +52,7 @@ Main $@
 sed -rn '{
     s/#//
     s|([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})|\1/\2/\3|
-    w colors.property
+    w .Xresources.d/colors.property
 }' <<EOF
 !=> $THEME
 
